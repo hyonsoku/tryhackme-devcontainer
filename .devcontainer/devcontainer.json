@@ -1,0 +1,6 @@
+{
+  "name": "TryHackMe DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  }
+}
