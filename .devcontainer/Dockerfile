@@ -1,3 +1,3 @@
 FROM kalilinux/kali-rolling
 
-RUN apt install openvpn
+RUN apt update && apt install -y openvpn
