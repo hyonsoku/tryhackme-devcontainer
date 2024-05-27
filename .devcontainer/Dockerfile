@@ -1,7 +1,11 @@
 FROM kalilinux/kali-rolling
 
-RUN apt update && apt install -y openvpn && \
-    apt install -y novnc x11vnc
+RUN apt update && apt upgrade -y && \
+    apt install -y
+        openvpn \
+        novnc x11vnc && \
+    apt autoremove -y && \
+    apt clean
 
 # Configuration for OpenVPN
 COPY *.ovpn /etc/openvpn
