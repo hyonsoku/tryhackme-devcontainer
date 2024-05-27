@@ -1,7 +1,7 @@
 FROM kalilinux/kali-rolling
 
-RUN apt update && apt upgrade -y && \
-    apt install -y
+RUN apt update && apt upgrade -y && \8081
+    apt install -y \
         openvpn \
         novnc x11vnc && \
     apt autoremove -y && \
