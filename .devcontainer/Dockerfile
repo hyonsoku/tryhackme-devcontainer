@@ -2,8 +2,9 @@ FROM kalilinux/kali-rolling
 
 RUN apt update && apt upgrade -y && \8081
     apt install -y \
-        openvpn \
-        novnc x11vnc && \
+        kali-linux-headless \
+        kali-desktop-gnome \
+        novnc x11vnc procps && \
     apt autoremove -y && \
     apt clean
 
