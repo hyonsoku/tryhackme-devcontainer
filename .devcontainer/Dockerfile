@@ -1,12 +1,12 @@
 FROM kalilinux/kali-rolling
 
-RUN apt update && apt upgrade -y && \8081
-    apt install -y \
+RUN apt-get update && apt-get upgrade -y && \8081
+    apt-get install -y \
         kali-linux-headless \
         kali-desktop-gnome \
         novnc x11vnc procps && \
-    apt autoremove -y && \
-    apt clean
+    apt-get autoremove -y && \
+    apt-get clean
 
 # Configuration for OpenVPN
 COPY *.ovpn /etc/openvpn
