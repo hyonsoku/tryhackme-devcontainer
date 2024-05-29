@@ -1,9 +1,8 @@
 FROM kalilinux/kali-rolling
 
-RUN apt-get update && apt-get upgrade -y && \8081
+RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y \
-        kali-linux-headless \
-        kali-desktop-gnome \
+        kali-desktop-xfce \
         novnc x11vnc procps && \
     apt-get autoremove -y && \
     apt-get clean
